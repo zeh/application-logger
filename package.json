@@ -5,7 +5,8 @@
   "main": "src/main.ts",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "webpack"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,11 @@
   },
   "homepage": "https://github.com/zeh/application-logger#readme",
   "devDependencies": {
-    "typescript": "^2.2.2"
+    "cross-env": "^4.0.0",
+    "source-map-loader": "^0.2.1",
+    "ts-loader": "^2.0.3",
+    "typescript": "^2.2.2",
+    "webpack": "^2.4.1"
   },
   "dependencies": {
     "@types/electron": "^1.4.37",
