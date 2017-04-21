@@ -2,7 +2,7 @@
   "name": "application-logger",
   "version": "1.0.0",
   "description": "",
-  "main": "src/main.ts",
+  "main": "dist/app.js",
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/zeh/application-logger#readme",
   "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^4.0.0",
     "source-map-loader": "^0.2.1",
     "ts-loader": "^2.0.3",
@@ -33,6 +34,7 @@
   },
   "dependencies": {
     "@types/electron": "^1.4.37",
+    "@types/node": "^7.0.18",
     "@types/react": "^15.0.22",
     "@types/react-dom": "^15.5.0",
     "electron": "^1.6.5",
