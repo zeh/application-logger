@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/main.ts",
   "scripts": {
-    "dev": "electron .",
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +28,10 @@
   },
   "dependencies": {
     "@types/electron": "^1.4.37",
-    "electron": "^1.6.5"
+    "@types/react": "^15.0.22",
+    "@types/react-dom": "^15.5.0",
+    "electron": "^1.6.5",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
   }
 }
