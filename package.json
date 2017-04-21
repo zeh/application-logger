@@ -1,0 +1,33 @@
+{
+  "name": "application-logger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "dev": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeh/application-logger.git"
+  },
+  "keywords": [
+    "typescript",
+    "application",
+    "logging",
+    "electron"
+  ],
+  "author": "Zeh Fernando",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zeh/application-logger/issues"
+  },
+  "homepage": "https://github.com/zeh/application-logger#readme",
+  "devDependencies": {
+    "typescript": "^2.2.2"
+  },
+  "dependencies": {
+    "@types/electron": "^1.4.37",
+    "electron": "^1.6.5"
+  }
+}
