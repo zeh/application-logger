@@ -38,6 +38,16 @@ module.exports = {
                 from: '**/*',
                 to: './dist/',
             },
+			{
+                context: './src/',
+                from: 'icons/**/*',
+                to: './dist/',
+            },
+			{
+                context: './src/',
+                from: 'config/**/*',
+                to: './dist/',
+            },
         ]),
 	],
 };
