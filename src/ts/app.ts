@@ -1,5 +1,5 @@
 // https://medium.com/@paulirwin/getting-started-with-electron-and-visual-studio-code-typescript-and-react-36d41b68fadb
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, Menu, Tray } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
 
@@ -10,6 +10,19 @@ const electron = require('electron')
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow: Electron.BrowserWindow | null;
+let tray: Electron.Tray;
+
+function createTray() {
+	tray = new Tray('./dist/icons/iconNormal.png');
+	const contextMenu = Menu.buildFromTemplate([
+		{ label: 'Item1', type: 'radio' },
+		{ label: 'Item2', type: 'radio' },
+		{ label: 'Item3', type: 'radio', checked: true},
+		{ label: 'Item4', type: 'radio' }
+	]);
+	tray.setToolTip('This is my application.');
+	tray.setContextMenu(contextMenu);
+}
 
 function createWindow() {
 	// Create the browser window.
@@ -30,7 +43,7 @@ function createWindow() {
 	console.log("window created, current location is " + process.cwd());
 
 	// Open the DevTools.
-	// mainWindow.webContents.openDevTools()
+	mainWindow.webContents.openDevTools()
 
 	// Emitted when the window is closed.
 	mainWindow.on('closed', function () {
@@ -44,7 +57,10 @@ function createWindow() {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on('ready', createWindow);
+app.on('ready', () => {
+	createWindow();
+	createTray();
+});
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
