@@ -22,6 +22,7 @@ function createTray() {
 	]);
 	tray.setToolTip('This is my application.');
 	tray.setContextMenu(contextMenu);
+	// Reference: https://github.com/electron/electron/blob/master/docs/api/menu.md
 }
 
 function createWindow() {
