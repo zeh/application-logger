@@ -23,6 +23,12 @@ function createTray() {
 	tray.setToolTip('This is my application.');
 	tray.setContextMenu(contextMenu);
 	// Reference: https://github.com/electron/electron/blob/master/docs/api/menu.md
+
+	// To get the current application info:
+	// 1. On Windows, use node-ffi? https://github.com/node-ffi/node-ffi
+	// 2. On OSX
+	//    Use AppleScript? https://github.com/TooTallNate/node-applescript
+	//    Use lsappinfo info `lsappinfo front`? http://stackoverflow.com/questions/24515436/how-to-get-current-foreground-applications-name-or-pid-in-os-x
 }
 
 function createWindow() {
